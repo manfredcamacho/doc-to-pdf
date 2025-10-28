@@ -12,11 +12,11 @@ It automatically finds your LibreOffice installation (on Windows, macOS, and Lin
 ## How to Use
 
 1.  **Install LibreOffice** (if you haven't already).
-2.  **Download the Script**: Save the `convert_pdf.py` file to your computer.
+2.  **Download the Script**: Save the `doc2pdf.py` file to your computer.
 3.  **Open Your Terminal** (Command Prompt, PowerShell, or Terminal).
 4.  **Run the script**:
     ```bash
-    python convert_pdf.py [OPTIONS] <input_file_or_dir_1> [input_2] ...
+    python doc2pdf.py [OPTIONS] <input_file_or_dir_1> [input_2] ...
     ```
 
 ### Options
@@ -31,33 +31,33 @@ It automatically finds your LibreOffice installation (on Windows, macOS, and Lin
 Converts `report.docx` and saves it as `report.pdf` in the *same folder*.
 
 ```bash
-python convert_pdf.py "C:\Users\MyUser\Documents\report.docx"
+python doc2pdf.py "C:\Users\MyUser\Documents\report.docx"
 ```
 
 ### 2. Convert multiple specific files
 Converts both files, saving each PDF in its respective original folder.
 
 ```bash
-python convert_pdf.py ./docs/file_one.doc ./other/file_two.docx
+python doc2pdf.py ./docs/file_one.doc ./other/file_two.docx
 ```
 
 ### 3. Convert all files in a directory
 Finds all .doc and .docx files inside the Monthly_Reports folder and saves the new PDFs inside that same folder.
 
 ```bash
-python convert_pdf.py "/home/myuser/Documents/Monthly_Reports"
+python doc2pdf.py "/home/myuser/Documents/Monthly_Reports"
 ```
 
 ### 4. Convert files to a specific output directory
 Converts report.docx and saves the resulting report.pdf inside the C:\Converted_PDFs folder.
 
 ```bash
-python convert_pdf.py -o "C:\Converted_PDFs" "C:\Users\MyUser\Documents\report.docx"
+python doc2pdf.py -o "C:\Converted_PDFs" "C:\Users\MyUser\Documents\report.docx"
 ```
 
 ### 5. Convert mixed inputs to one output directory
 Converts file.doc and all documents inside the Old_Reports folder, saving all resulting PDFs into the All_PDFs folder.
 
 ```bash
-python convert_pdf.py -o ./All_PDFs ./file.doc ./Old_Reports
+python doc2pdf.py -o ./All_PDFs ./file.doc ./Old_Reports
 ```
